@@ -58,3 +58,8 @@ const Empty = styled.p`
   text-align: center;
   margin: 2.4rem;
 `;
+import React from 'react'
+
+export default function Table() {
+ 
+}
