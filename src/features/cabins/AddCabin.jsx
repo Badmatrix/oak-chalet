@@ -1,34 +1,38 @@
 import Button from "../../ui/Button";
+import CreateCabinForm from "./CreateCabinForm";
 import Modal from "../../ui/Modal";
-import CreateCabinForm from "./CreateCabinForm"; 
-// export default function AddCabin() {
-//   const [isOpenModal, setIsOpenModal] = useState(false);
+// import { useState } from "react";
 
-//   return (
-//     <div>
-//       <Button onClick={() => setIsOpenModal((show) => !show)}>
-//         {isOpenModal ? "close form" : "add new cabin"}
-//       </Button>
-//       {isOpenModal && (
-//         <Modal onClose={() => setIsOpenModal(false)}>
-//           <CreateCabinForm onCloseModal={() => setIsOpenModal(false)} />
-//         </Modal>
-//       )}
-//     </div>
-//   );
-// }
-
-export default function AddCabin() {
+function AddCabin() {
   return (
     <div>
       <Modal>
-        <Modal.Open opens="cabinForm">
-          <Button>add new cabin</Button>
+        <Modal.Open opens="cabin-form">
+          <Button>Add new cabin</Button>
         </Modal.Open>
-        <Modal.Window name="cabinForm">
+        <Modal.Window name="cabin-form">
           <CreateCabinForm />
         </Modal.Window>
       </Modal>
     </div>
   );
 }
+
+// function AddCabin() {
+//   const [isOpenModal, setIsOpenModal] = useState(false);
+
+//   return (
+// 		<div>
+// 			<Button onClick={() => setIsOpenModal((show) => !show)}>
+// 				{isOpenModal ? "Close" : "Add new cabin"}
+// 			</Button>
+// 			{isOpenModal && (
+// 				<Modal onClose={() => setIsOpenModal(false)}>
+// 					<CreateCabinForm onCloseModal={() => setIsOpenModal(false)} />
+// 				</Modal>
+// 			)}
+// 		</div>
+// 	);
+// }
+
+export default AddCabin;

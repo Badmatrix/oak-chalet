@@ -1,22 +1,27 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
-// const supabasePass = 'fMY0oAIB1JWXwEr6';
+import { Uploader } from "../data/Uploader";
 
-const StyledSideBar = styled.aside`
-  padding: 3.2rem 2.4rem;
+const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
+  padding: 3.2rem 2.4rem;
   border-right: 1px solid var(--color-grey-100);
-  grid-row: 1/-1;
+
+  grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 `;
-export default function SideBar() {
+
+function Sidebar() {
   return (
-      <StyledSideBar>
-          <Logo />
-          <MainNav/>
-    </StyledSideBar>
-  )
+    <StyledSidebar>
+      <Logo />
+      <MainNav />
+      {/* <Uploader/> */}
+    </StyledSidebar>
+  );
 }
+
+export default Sidebar;
